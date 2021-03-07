@@ -20,5 +20,9 @@ dependencies {
 	testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.1")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.1")
 
-	implementation(project(":module:com.sandpolis.core.instance"))
+	if (project.getParent() == null) {
+		api("com.sandpolis:core.instance:0.1.0")
+	} else {
+		api(project(":module:com.sandpolis.core.instance"))
+	}
 }
