@@ -21,8 +21,8 @@ dependencies {
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.1")
 
 	if (project.getParent() == null) {
-		implementation("com.sandpolis:core.net:0.2.0")
-		implementation("com.sandpolis:core.instance:0.2.0")
+		implementation("com.sandpolis:core.net:+")
+		implementation("com.sandpolis:core.instance:+")
 	} else {
 		implementation(project(":module:com.sandpolis.core.net"))
 		implementation(project(":module:com.sandpolis.core.instance"))
